@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className="home">
         {/* props as => variable=data_value */}
-        <BlogList blogs={blogs}/> 
+        <BlogList blogs={blogs} title="Our Blogs"/> 
         </div>
     );
 }
