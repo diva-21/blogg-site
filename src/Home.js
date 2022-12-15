@@ -9,7 +9,8 @@ const Home = () => {
     return (
         <div className="home">
         {/* props as => variable=data_value */}
-        <BlogList blogs={blogs} title="Our Blogs"/> 
+        <BlogList blogs={blogs} title="Our Blogs"/>
+        <BlogList blogs={blogs.filter((item)=>item.author==="mario")} title="Mario's Blogs"/> 
         </div>
     );
 }
