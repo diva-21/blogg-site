@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import BlogList from "./BlogList";
 const Home = () => {
     const [blogs, setBlogs] = useState([
@@ -12,11 +12,15 @@ const Home = () => {
         // set this newblogs from usestate hook
         setBlogs(newblogs);
       }
+      useEffect(()=>{
+        console.log("usefecct is running");
+        
+      },[])
     return (
         <div className="home">
         {/* props as => variable=data_value */}
         <BlogList blogs={blogs} title="Our Blogs" handleDelete={handleDelete}/>
-        <BlogList blogs={blogs.filter((item)=>item.author==="mario")} title="Mario's Blogs" handleDelete={handleDelete}/> 
+        
         </div>
     );
 }
